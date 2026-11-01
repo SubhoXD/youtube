@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>M_K GAMER | Official Website</title><style>
 
-<title>M_K GAMER | Official Website</title>
-
-<style>
 * {
     margin: 0;
     padding: 0;
@@ -17,9 +13,11 @@ body {
     font-family: Arial, sans-serif;
     background: #080808;
     color: white;
+    overflow-x: hidden;
 }
 
 /* Navbar */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -48,6 +46,7 @@ nav a:hover {
 }
 
 /* Hero Section */
+
 .hero {
     min-height: 85vh;
     display: flex;
@@ -63,6 +62,7 @@ nav a:hover {
     color: gold;
     letter-spacing: 4px;
     margin-bottom: 15px;
+    text-shadow: 0 0 20px #FFD70055;
 }
 
 .hero p {
@@ -73,20 +73,24 @@ nav a:hover {
 }
 
 /* Buttons */
+
 .buttons {
-    margin-top: 30px;
+    margin-top: 35px;
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .btn {
+    display: inline-block;
     padding: 15px 30px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.35s ease;
+    cursor: pointer;
 }
 
 .gold {
@@ -105,11 +109,49 @@ nav a:hover {
     box-shadow: 0 0 25px #FFD70077;
 }
 
-/* About */
+/* Subscribe Mascot Animation */
+
+.subscribe-wrap {
+    position: relative;
+    display: inline-block;
+    z-index: 5;
+}
+
+.mascot {
+    position: absolute;
+    width: 145px;
+    height: auto;
+    right: -115px;
+    bottom: -25px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(-65px) scale(0.5);
+    transform-origin: bottom left;
+
+    transition: all 0.5s ease;
+
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Mascot appears on hover */
+
+.subscribe-wrap:hover .mascot,
+.subscribe-wrap:focus-within .mascot {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1);
+}
+
+/* About Section */
+
 .about {
     padding: 70px 20px;
     text-align: center;
     background: #111;
+    border-top: 1px solid #292929;
 }
 
 .about h2 {
@@ -126,6 +168,7 @@ nav a:hover {
 }
 
 /* Footer */
+
 footer {
     text-align: center;
     padding: 25px;
@@ -136,63 +179,131 @@ footer {
 footer span {
     color: gold;
 }
-</style>
-</head>
 
-<body>
+/* Mobile Responsive */
 
-<nav>
-    <div class="logo">M_K GAMER</div>
+@media (max-width: 600px) {
 
-    <div>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-    </div>
-</nav>
+    nav {
+        padding: 18px 5%;
+    }
 
-<section class="hero" id="home">
+    .logo {
+        font-size: 19px;
+    }
 
-    <h1>M_K GAMER</h1>
+    nav a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
 
-    <p>
-        WELCOME TO MY GAMING WORLD.
-        Explore epic gameplay, exciting challenges,
-        gaming adventures and much more!
-    </p>
+    .hero h1 {
+        font-size: 38px;
+    }
 
-    <div class="buttons">
+    .hero p {
+        font-size: 15px;
+    }
+
+    .buttons {
+        gap: 20px;
+    }
+
+    .btn {
+        padding: 13px 20px;
+        font-size: 13px;
+    }
+
+    .mascot {
+        width: 105px;
+        right: -65px;
+        bottom: -100px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn,
+    .mascot {
+        transition: none;
+    }
+}
+
+</style></head><body><!-- NAVBAR --><nav><div class="logo">M_K GAMER</div>
+
+<div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+</div>
+
+</nav><!-- HERO SECTION --><section class="hero" id="home"><h1>M_K GAMER</h1>
+
+<p>
+    WELCOME TO MY GAMING WORLD.
+    Explore epic gameplay, exciting challenges,
+    gaming adventures and much more!
+</p>
+
+<!-- BUTTONS -->
+
+<div class="buttons">
+
+    <!-- SUBSCRIBE BUTTON + MASCOT -->
+
+    <div class="subscribe-wrap">
 
         <a class="btn gold"
-        href="https://www.youtube.com/@m_kgamer8166"
-        target="_blank">
+        href="https://youtube.com/@m_kgamer8166"
+        target="_blank"
+        rel="noopener noreferrer">
+
         ▶ SUBSCRIBE NOW
+
         </a>
 
-        <a class="btn outline"
-        href="https://youtu.be/Cz7pIQLK6b0?si=wlal8AhyFQoNCzYa"
-        target="_blank">
-        WATCH VIDEOS
-        </a>
+        <img
+        src="1000148743.png"
+        class="mascot"
+        alt="M_K GAMER Minecraft Character">
 
     </div>
 
-</section>
+    <!-- WATCH VIDEOS -->
 
-<section class="about" id="about">
+    <a class="btn outline"
+    href="https://youtube.com/@m_kgamer8166/videos"
+    target="_blank"
+    rel="noopener noreferrer">
 
-    <h2>ABOUT M_K GAMER</h2>
+    WATCH VIDEOS
 
-    <p>
-        Gaming is not just a hobby, it's an adventure.
-        Welcome to M_K GAMER, where gaming meets entertainment.
-        Join the community and enjoy the journey!
-    </p>
+    </a>
 
-</section>
+    <!-- LATEST VIDEO -->
 
-<footer>
-    © 2026 <span>M_K GAMER</span>. All Rights Reserved.
-</footer>
+    <a class="btn gold"
+    href="https://youtu.be/Cz7pIQLK6b0"
+    target="_blank"
+    rel="noopener noreferrer">
 
-</body>
+    ▶ LATEST VIDEO
+
+    </a>
+
+</div>
+
+</section><!-- ABOUT SECTION --><section class="about" id="about"><h2>ABOUT M_K GAMER</h2>
+
+<p>
+    Gaming is not just a hobby, it's an adventure.
+
+    Welcome to M_K GAMER, where gaming meets
+    entertainment.
+
+    Join the community and enjoy the journey!
+</p>
+
+</section><!-- FOOTER --><footer>© 2026 <span>M_K GAMER</span>. All Rights Reserved.
+
+</footer></body>
 </html>
